@@ -13,11 +13,18 @@ for (i = 0;i < 9; i++) {
     var hourRowEl = $("<div>").addClass("hour col-md-2").text(moment("9:00 AM", "hh:mm A").add(i, "hours").format('hA'));
         hourRowEl.attr("date-time", moment("9:00 AM", "hh:mm A").add(i, "hours").format('hA'));
     var reminderInputEl = $("<textarea>").addClass("col-md-9");
-    var saveBtnEl = $("<button>").addClass("saveBtn col-md-1");
-}
+    var saveBtnEl = $("<button>").addClass("saveBtn col-md-1").html('<i class="fas fa-save"></i>');
 
 // append rows to container
 $(".container").append(rowEl);
 $(rowEl).append(hourRowEl);
 $(hourRowEl).after(reminderInputEl);
 $(reminderInputEl).after(saveBtnEl);
+
+// determine if rows are past, present, future 
+
+}
+
+// save button click to localstorage
+
+// retrieve reminder from local storage
