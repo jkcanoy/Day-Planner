@@ -40,9 +40,9 @@ $(".saveBtn").on("click", function() {
 });
 
 // get and display items saved to local storage
-// $(document).ready(function() {
-//     hourRowArr = $(".hour").toArray();
-//     for (i = 0; hourRowArr.length; i++) {
-//         $(hourRowArr[i]).siblings("textarea").text(localStorage.getItem($(hourRowArr[i]).attr("data-time")));
-//     }
-// })
+$(document).ready(function() {
+    hourRowArr = $(".hour").toArray();
+    for (i = 0; i < hourRowArr.length; i++) {
+        $(hourRowArr[i]).siblings("textarea").text(localStorage.getItem($(hourRowArr[i]).attr("data-time")));
+    }
+})
